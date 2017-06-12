@@ -83,10 +83,27 @@ d3.json("data/graph3square.json", function(data) {
       .attr("transform", "translate(0," + height + ")")
       .call(d3.axisBottom(xScale)); // Create an axis component with d3.axisBottom
 
+//add text label for the x axis
+  svg.append("text")             
+      .attr("transform",
+            "translate(" + (width/2) + " ," + 
+                           (height + margin.top + 20) + ")")
+      .style("text-anchor", "middle")
+      .text("Year");
+
   // 4. Call the y axis in a group tag
   svg.append("g")
       .attr("class", "y axis")
       .call(d3.axisLeft(yScale)); // Create an axis component with d3.axisLeft
+  
+  // text label for the y axis
+  svg.append("text")
+      .attr("transform", "rotate(-90)")
+      .attr("y", 0 - margin.left)
+      .attr("x",0 - (height / 2))
+      .attr("dy", "1em")
+      .style("text-anchor", "middle")
+      .text("Average mins per day per respondent"); 
 
   // 9. Append the path, bind the data, and call the line generator
   lineNames.forEach(function (name) {
