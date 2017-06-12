@@ -10,179 +10,97 @@
     <link rel="stylesheet" href="css/machines.css">
   </head>
   <body>
+    <h1>Rise of the machines</h1>
     <div class="row">
       <div class="large-12 columns">
-        <h1>Rise of the machines</h1>
         <h2>A look at the use of technology over time</h2>
       </div>
     </div>
 
-
-
     <div class="row">
       <div class="large-12 columns">
-        <div class="callout">
-          <h3> The Average American Day </h3>
-          <p> This chart demonstrates what the Average American Day looks like.  It may not represent what you think a typical day looks like because these numbers are for every person in the USA ages 15 and over, and for all days of the week combined.  For example, if you were to consider a weekend day, then the recreation times would be higher, and work times would be lower </p>
-          <img src="TheAverageAmericanDay.png" alt="Pie Chart Hours" style="width:500;height:350;">
-          </div>
+        <p>Computers have changed from being large, expensive, inaccessible objects to being small, portable objects that can be bought at the local shopping mall with less than a days salary.  Research completed by the Pew Centre (2015)* suggests that at least 73% of all adult American’s own a laptop or desktop computer, and that at least 68% of them own a smart phone.  Reduction in size and price, associated with an improvement in performance means that computers are now used to perform tasks that they weren’t able to perform 10 years ago.</p>
+        <p>With these changes in technology, we would expect to see an associated change in the way American’s use their time.  What does the average American day look like?  How many people use computers and what do they use them for?  How has it changed over time?</p>
       </div>
     </div>
 
-        <div class="row">
+    <div class="row">
+      <h3> The Average American Day</h3>
       <div class="large-12 columns">
         <div class="callout">
-          <h3> This will be a D3 Module </h3>
-          <svg width="1000" height="700" id="two">
-          <g/>
-          </svg>
-
-          <p>To get going, this file (index.html) includes some basic styles you can modify, play around with, or totally destroy to get going.</p>
-          <p>Once you've exhausted the fun in this document, you should check out:</p>
-          <div class="row">
-            <div class="large-4 medium-4 columns">
-              <p><a href="http://foundation.zurb.com/docs">Foundation Documentation</a><br />Everything you need to know about using the framework.</p>
-            </div>
-            <div class="large-4 medium-4 columns">
-              <p><a href="http://zurb.com/university/code-skills">Foundation Code Skills</a><br />These online courses offer you a chance to better understand how Foundation works and how you can master it to create awesome projects.</p>
-            </div>
-            <div class="large-4 medium-4 columns">
-              <p><a href="http://foundation.zurb.com/forum">Foundation Forum</a><br />Join the Foundation community to ask a question or show off your knowlege.</p>
-            </div>
+          <p>Let’s start by looking at the typical American day.  The data used for these visualisations are from the American Time Use Survey (2003-2015)**. This is a survey that is completed each year by the American Bureau of Labour Statistics (BLS).  The typical American spends on average, 8 hours and 48 mins sleeping, and 7 hours at work.  Please be mindful that these hours include weekends, which is why the average working time is not as high as you would expect.</p>
+          <div width="550" height="750" id="clock">
+            <div id="clockHands"></div>
           </div>
-          <div class="row">
-            <div class="large-4 medium-4 medium-push-2 columns">
-              <p><a href="http://github.com/zurb/foundation">Foundation on Github</a><br />Latest code, issue reports, feature requests and more.</p>
-            </div>
-            <div class="large-4 medium-4 medium-pull-2 columns">
-              <p><a href="https://twitter.com/ZURBfoundation">@zurbfoundation</a><br />Ping us on Twitter if you have questions. When you build something with this we'd love to see it (and send you a totally boss sticker).</p>
-            </div>
-          </div>
+          <p>Unfortunately, there is no specific activity recorded just for computer use, so we will need to look at the different components of the average day that may include computer use.  This includes work, recreation and gaming.</p>
         </div>
       </div>
     </div>
 
     <div class="row">
-      <div class="large-8 medium-8 columns">
-        <h5>Here&rsquo;s your basic grid:</h5>
-        <!-- Grid Example -->
-
-        <div class="row">
-          <div class="large-12 columns">
-            <div class="primary callout">
-              <p><strong>This is a twelve column section in a row.</strong> Each of these includes a div.callout element so you can see where the columns are - it's not required at all for the grid.</p>
-            </div>
-          </div>
+      <h3>Working with computers</h3>
+      <div class="large-12 columns">
+        <div class="callout">
+          <div width="1000" height="400" id="employment"></div>
+          <p>In 2003 only 2.4% of ATUS respondents had jobs in technology occupations such as Computer Software Engineers, Computer Programmers, Computer Scientists and Systems Analysts.  Where as in 2015, this has increased more than 100%, with 4.5% of all respondents suggesting they are working in these industries.  The BLS even added extra occupation classifications in 2011 in order to match the growth of employment in these areas.</p>
         </div>
-        <div class="row">
-          <div class="large-6 medium-6 columns">
-            <div class="primary callout">
-              <p>Six columns</p>
-            </div>
-          </div>
-          <div class="large-6 medium-6 columns">
-            <div class="primary callout">
-              <p>Six columns</p>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="large-4 medium-4 small-4 columns">
-            <div class="primary callout">
-              <p>Four columns</p>
-            </div>
-          </div>
-          <div class="large-4 medium-4 small-4 columns">
-            <div class="primary callout">
-              <p>Four columns</p>
-            </div>
-          </div>
-          <div class="large-4 medium-4 small-4 columns">
-            <div class="primary callout">
-              <p>Four columns</p>
-            </div>
-          </div>
-        </div>
+      </div>
+    </div>
 
-        <hr />
+    <div class="row">
+      <h3>Recreation and games with Computers</h3>
+      <div class="large-12 columns">
+        <div class="callout">
+          <div width="1000" height="400" id="average"></div>
+          <p>The ATUS survey classes activities such as computer games under the category of “Gaming, including use of computer games”.  Activities relating to using a computer for personal communication, such as Email, Twitter, Facebook, plus general Internet surfing are reported as “Use of a computer for recreational use (not computer games)”.   Both of these categories have shown increases in the time that the ATUS survey has been running, with the total increase represented below.</p>
+        </div>
+      </div>
+    </div>
 
-        <h5>We bet you&rsquo;ll need a form somewhere:</h5>
-        <form>
+    <div class="row">
+      <h3>How do you compare?</h3>
+      <div class="large-12 columns">
+        <div class="callout when">
+          <p>The interactive visualization below demonstrates the start and stop times of people using a computer for recreational use.  Please select your age and your sex from the drop down menus, then you can see how you compare.  The curves represent the percentage of people in that category that are using computers at that time of day.  There is an obvious evening rush, where most people would be home from work, relaxing and using computers for socialization or entertainment purposes.</p>
           <div class="row">
-            <div class="large-12 columns">
-              <label>Input Label</label>
-              <input type="text" placeholder="large-12.columns" />
+            <div class="large-4 medium-4 small-4 columns">
+              <div class="primary">
+                <p>Select options to filter</p>
+              </div>
             </div>
-          </div>
-          <div class="row">
-            <div class="large-4 medium-4 columns">
-              <label>Input Label</label>
-              <input type="text" placeholder="large-4.columns" />
+            <div class="large-4 medium-4 small-4 columns">
+              <div class="primary gender">
+              </div>
             </div>
-            <div class="large-4 medium-4 columns">
-              <label>Input Label</label>
-              <input type="text" placeholder="large-4.columns" />
-            </div>
-            <div class="large-4 medium-4 columns">
-              <div class="row collapse">
-                <label>Input Label</label>
-                <div class="input-group">
-                  <input type="text" placeholder="small-9.columns" class="input-group-field" />
-                  <span class="input-group-label">.com</span>
-                </div>
+            <div class="large-4 medium-4 small-4 columns">
+              <div class="primary age">
               </div>
             </div>
           </div>
-          <div class="row">
-            <div class="large-12 columns">
-              <label>Select Box</label>
-              <select>
-                <option value="husker">Husker</option>
-                <option value="starbuck">Starbuck</option>
-                <option value="hotdog">Hot Dog</option>
-                <option value="apollo">Apollo</option>
-              </select>
-            </div>
-          </div>
-          <div class="row">
-            <div class="large-6 medium-6 columns">
-              <label>Choose Your Favorite</label>
-              <input type="radio" name="pokemon" value="Red" id="pokemonRed"><label for="pokemonRed">Radio 1</label>
-              <input type="radio" name="pokemon" value="Blue" id="pokemonBlue"><label for="pokemonBlue">Radio 2</label>
-            </div>
-            <div class="large-6 medium-6 columns">
-              <label>Check these out</label>
-              <input id="checkbox1" type="checkbox"><label for="checkbox1">Checkbox 1</label>
-              <input id="checkbox2" type="checkbox"><label for="checkbox2">Checkbox 2</label>
-            </div>
-          </div>
-          <div class="row">
-            <div class="large-12 columns">
-              <label>Textarea Label</label>
-              <textarea placeholder="small-12.columns"></textarea>
-            </div>
-          </div>
-        </form>
-      </div>
-
-      <div class="large-4 medium-4 columns">
-        <h5>Try one of these buttons:</h5>
-        <p><a href="#" class="button">Simple Button</a><br/>
-        <a href="#" class="success button">Success Btn</a><br/>
-        <a href="#" class="alert button">Alert Btn</a><br/>
-        <a href="#" class="secondary button">Secondary Btn</a></p>
-        <div class="callout">
-          <h5>So many components, girl!</h5>
-          <p>A whole kitchen sink of goodies comes with Foundation. Check out the docs to see them all, along with details on making them your own.</p>
-          <a href="http://foundation.zurb.com/sites/docs/" class="small button">Go to Foundation Docs</a>
+          <div width="900" height="400" id="when"></div>
         </div>
       </div>
     </div>
-    <script src="//d3js.org/d3.v3.min.js"></script>
+
+    <div class="row">
+      <h3>Key References:</h3>
+      <div class="large-12 columns">
+        <div class="references">
+          <div width="1000" height="400" id="average"></div>
+          <ul>
+            <li>The American Time Use Survey: <a href="https://www.bls.gov/tus/">https://www.bls.gov/tus/</a></li>
+            <li>The Pew Research Centre: <a href="http://www.pewinternet.org/2015/10/29/technology-device-ownership-2015/">http://www.pewinternet.org/2015/10/29/technology-device-ownership-2015/</a></li>
+          </ul>
+      </div>
+    </div>
+
+    <script src="//d3js.org/d3.v4.min.js"></script>
     <script src="js/vendor/jquery.js"></script>
     <script src="js/vendor/what-input.js"></script>
     <script src="js/vendor/foundation.js"></script>
     <script src="js/graph1.js"></script>
     <script src="js/graph2.js"></script>
+    <script src="js/graph3.js"></script>
+    <script src="js/graph4.js"></script>
   </body>
 </html>

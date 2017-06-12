@@ -1,0 +1,46 @@
+[
+  {
+    "ActivityClass": "Care",
+    "ActivityDuration": 1.82
+  },
+  {
+    "ActivityClass": "Chores",
+    "ActivityDuration": 2.95
+  },
+  {
+    "ActivityClass": "Education",
+    "ActivityDuration": 4.57
+  },
+  {
+    "ActivityClass": "Food",
+    "ActivityDuration": 1.18
+  },
+  {
+    "ActivityClass": "Other",
+    "ActivityDuration": 2.29
+  },
+  {
+    "ActivityClass": "Recreation",
+    "ActivityDuration": 5.13
+  },
+  {
+    "ActivityClass": "Religious Activities",
+    "ActivityDuration": 1.79
+  },
+  {
+    "ActivityClass": "Sleeping",
+    "ActivityDuration": 8.81
+  },
+  {
+    "ActivityClass": "Sports and Fitness",
+    "ActivityDuration": 1.79
+  },
+  {
+    "ActivityClass": "Volunteer",
+    "ActivityDuration": 1.31
+  },
+  {
+    "ActivityClass": "Work",
+    "ActivityDuration": 6.98
+  }
+]

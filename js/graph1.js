@@ -1,89 +1,134 @@
 $(document).foundation()
-// tooltips from http://stackoverflow.com/questions/10805184/show-data-on-mouseover-of-circle
+// clockTooltips from http://stackoverflow.com/questions/10805184/show-data-on-mouseover-of-circle
 
 // set the dimensions of the canvas
 var margin = {top: 20, right: 20, bottom: 70, left: 40};
 var width = 1000;
 var height = 700;
 
+//define a function to sort the pie chart by activity duration length
+function sortbyDuration (a,b) {
+  if (a.ActivityDuration == b.ActivityDuration) 
+    return 0;
+  else if (a.ActivityDuration < b.ActivityDuration)
+    return -1;
+  else
+    return 1
+}
+
+//create tooltip elements
+var clockTooltip = d3.select('#clock')
+  .append('div')
+  .attr('class', 'clockTooltip');
+
+clockTooltip.append('div')
+  .attr('class', 'label');
+
+clockTooltip.append('div')
+  .attr('class', 'count');
+
+clockTooltip.append('div')
+  .attr('class', 'percent');
+
 // load the data
-// modify the below line to data.json or data-02.json for selecting the data sets.
-d3.json("data.json", function(data) {
+// Point the website to the Piechart JSON created from Data Wrangling
+d3.json("data/piechart.json", function(data) {
  
+data.sort(sortbyDuration);
+
   // add the SVG element
-  var svg = d3.select("svg#one");
+  // Pie chart code based on http://zeroviscosity.com/d3-js-step-by-step/
 
-  // Draw links
-  svg.append("g")
-  	.selectAll("g")
-    .data(data.links)
+  //width and height of the pie chart
+  var width = 550;
+  var height = 300;
+  var svgPadding = 200;
+  //radius of the pie chart
+  var radius = Math.min(width, height) / 2;
+  //size of the legend
+  var legendRectSize = 18;
+  var legendSpacing = 4;
+
+  //map in a set of colors
+  var color = d3.scaleOrdinal(d3.schemeCategory20b);
+
+  //initialise d3 on svg for pie chart
+  var svg = d3.select('#clock')
+    .append('svg')
+    .attr('width', width)
+    .attr('height', height + svgPadding)
+    .append('g')
+    .attr('transform', 'translate(170, 305)');
+
+  //d3 utility for drawing arcs
+  var arc = d3.arc()
+    .innerRadius(0)
+    .outerRadius(radius);
+
+  //obtaining the size of slices from data file
+  var pie = d3.pie()
+    .value(function(d) { return d.ActivityDuration; })
+    .sort(null); //to do look up d3 sort
+
+  //draw pie chart
+  var path = svg.selectAll('path')
+    .data(pie(data))
     .enter()
-    .append("line")
-    .attr("x1", function (d) {
-      return data.nodes.reduce(function (memo, node) {
-        return (node.id == d.node01) ? node.x : memo;
-      }, null);
-    })
-    .attr("x2", function (d) {
-      return data.nodes.reduce(function (memo, node) {
-        return (node.id == d.node02) ? node.x : memo;
-      }, null);
-    })
-    .attr("y1", function (d) {
-      return data.nodes.reduce(function (memo, node) {
-        return (node.id == d.node01) ? node.y : memo;
-      }, null);
-    })
-    .attr("y2", function (d) {
-      return data.nodes.reduce(function (memo, node) {
-        return (node.id == d.node02) ? node.y : memo;
-      }, null);
-    })
-    .attr("stroke", "#A9CCE3")
-    .attr("stroke-width", function (d) {
-      return d.amount / 50;
-    })
-    .append("svg:title")
-    .text( function (d) {
-      return "From: " +
-        d.node01 +
-        "\nTo: " +
-        d.node02 +
-        "\nTrade Amount: " +
-        d.amount
+    .append('path')
+    .attr('d', arc)
+    .attr('fill', function(d) {
+      return color(d.data.ActivityClass);
     });
 
-  //Draw nodes
-  svg.append("g")
-  	.selectAll("g")
-    .data(data.nodes)
-    .enter()
-    .append("circle")
-    .attr("cx", function (d) {
-      return d.x;
-    })
-    .attr("cy", function (d) {
-      return d.y;
-    })
-    .attr("r", function (d) {
-      let transactionTotal = data.links.reduce( function (total, link) {
-        if (d.id == link.node01 || d.id == link.node02) {
-          total += link.amount;
-        }
-        return total;
-      
-      // set circle area = transactionTotal
-      }, 0);
-      d.transactionTotal = transactionTotal;
-      return Math.sqrt(transactionTotal / Math.PI);
-    })
-    .append("svg:title")
-    .text( function (d) {
-      console.log(d);
-        return "Node: " +
-          d.id +
-          "\nTotal Trading Amount: " +
-          d.transactionTotal;
+    //add a function to display tooltip for mouseover events of the piechart
+    path.on('mouseover', function(d) {
+      var total = d3.sum(data.map(function(d) {
+        return d.ActivityDuration;
+      }));
+
+      var percent = Math.round(1000 * d.data.ActivityDuration / total) / 10;
+      clockTooltip.select('.label').html(d.data.ActivityClass);
+      clockTooltip.select('.count').html(d.data.ActivityDuration + " hours");
+      clockTooltip.select('.percent').html(percent + '%');
+      clockTooltip.style('display', 'block');
     });
 
+    //create an event to hide the tooltip when the mouse is not over the chart
+    path.on('mouseout', function() {
+      clockTooltip.style('display', 'none');
+    });
+
+    //have the tooltip follow the mouse
+    path.on('mousemove', function(d) {
+      clockTooltip.style('top', (d3.event.offsetY + 10) + 'px')
+        .style('left', (d3.event.layerX + 10) + 'px');
+    });
+
+  //draw a legend container
+  var legend = svg.selectAll('.legend')                 
+    .data(color.domain())
+    .enter()
+    .append('g')
+    .attr('class', 'legend')
+    .attr('transform', function(d, i) {
+      var height = legendRectSize + legendSpacing;
+      var offset =  height * color.domain().length / 2;
+      var horz = radius + 60;
+      var vert = i * height - offset;
+      return 'translate(' + horz + ',' + vert + ')';
+    });
+
+  //draw legend color boxes
+  legend.append('rect')
+    .attr('width', legendRectSize)
+    .attr('height', legendRectSize)
+    .style('fill', color)
+    .style('stroke', color);
+
+  //draw legend labels
+  legend.append('text')
+    .attr('x', legendRectSize + legendSpacing)
+    .attr('y', legendRectSize - legendSpacing)
+    .text(function(d) { return d; });
+   
 });

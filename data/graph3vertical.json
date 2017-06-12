@@ -1,0 +1,197 @@
+[
+  {
+    "Year": "2003",
+    "Type_Variable": "LeisureComputerTime",
+    "Mins_Value": 7.5052
+  },
+  {
+    "Year": "2004",
+    "Type_Variable": "LeisureComputerTime",
+    "Mins_Value": 9.0068
+  },
+  {
+    "Year": "2005",
+    "Type_Variable": "LeisureComputerTime",
+    "Mins_Value": 8.5264
+  },
+  {
+    "Year": "2006",
+    "Type_Variable": "LeisureComputerTime",
+    "Mins_Value": 8.2693
+  },
+  {
+    "Year": "2007",
+    "Type_Variable": "LeisureComputerTime",
+    "Mins_Value": 7.888
+  },
+  {
+    "Year": "2008",
+    "Type_Variable": "LeisureComputerTime",
+    "Mins_Value": 7.8184
+  },
+  {
+    "Year": "2009",
+    "Type_Variable": "LeisureComputerTime",
+    "Mins_Value": 9.1116
+  },
+  {
+    "Year": "2010",
+    "Type_Variable": "LeisureComputerTime",
+    "Mins_Value": 10.6683
+  },
+  {
+    "Year": "2011",
+    "Type_Variable": "LeisureComputerTime",
+    "Mins_Value": 12.3326
+  },
+  {
+    "Year": "2012",
+    "Type_Variable": "LeisureComputerTime",
+    "Mins_Value": 11.3777
+  },
+  {
+    "Year": "2013",
+    "Type_Variable": "LeisureComputerTime",
+    "Mins_Value": 11.5977
+  },
+  {
+    "Year": "2014",
+    "Type_Variable": "LeisureComputerTime",
+    "Mins_Value": 12.4031
+  },
+  {
+    "Year": "2015",
+    "Type_Variable": "LeisureComputerTime",
+    "Mins_Value": 10.5445
+  },
+  {
+    "Year": "2003",
+    "Type_Variable": "LeisureGame",
+    "Mins_Value": 9.1619
+  },
+  {
+    "Year": "2004",
+    "Type_Variable": "LeisureGame",
+    "Mins_Value": 10.0968
+  },
+  {
+    "Year": "2005",
+    "Type_Variable": "LeisureGame",
+    "Mins_Value": 9.5854
+  },
+  {
+    "Year": "2006",
+    "Type_Variable": "LeisureGame",
+    "Mins_Value": 10.2098
+  },
+  {
+    "Year": "2007",
+    "Type_Variable": "LeisureGame",
+    "Mins_Value": 10.5376
+  },
+  {
+    "Year": "2008",
+    "Type_Variable": "LeisureGame",
+    "Mins_Value": 11.1992
+  },
+  {
+    "Year": "2009",
+    "Type_Variable": "LeisureGame",
+    "Mins_Value": 11.8658
+  },
+  {
+    "Year": "2010",
+    "Type_Variable": "LeisureGame",
+    "Mins_Value": 11.025
+  },
+  {
+    "Year": "2011",
+    "Type_Variable": "LeisureGame",
+    "Mins_Value": 10.6868
+  },
+  {
+    "Year": "2012",
+    "Type_Variable": "LeisureGame",
+    "Mins_Value": 10.9796
+  },
+  {
+    "Year": "2013",
+    "Type_Variable": "LeisureGame",
+    "Mins_Value": 11.7275
+  },
+  {
+    "Year": "2014",
+    "Type_Variable": "LeisureGame",
+    "Mins_Value": 12.1634
+  },
+  {
+    "Year": "2015",
+    "Type_Variable": "LeisureGame",
+    "Mins_Value": 12.1894
+  },
+  {
+    "Year": "2003",
+    "Type_Variable": "TotalCompUse",
+    "Mins_Value": 16.6671
+  },
+  {
+    "Year": "2004",
+    "Type_Variable": "TotalCompUse",
+    "Mins_Value": 19.1036
+  },
+  {
+    "Year": "2005",
+    "Type_Variable": "TotalCompUse",
+    "Mins_Value": 18.1118
+  },
+  {
+    "Year": "2006",
+    "Type_Variable": "TotalCompUse",
+    "Mins_Value": 18.4792
+  },
+  {
+    "Year": "2007",
+    "Type_Variable": "TotalCompUse",
+    "Mins_Value": 18.4255
+  },
+  {
+    "Year": "2008",
+    "Type_Variable": "TotalCompUse",
+    "Mins_Value": 19.0175
+  },
+  {
+    "Year": "2009",
+    "Type_Variable": "TotalCompUse",
+    "Mins_Value": 20.9773
+  },
+  {
+    "Year": "2010",
+    "Type_Variable": "TotalCompUse",
+    "Mins_Value": 21.6932
+  },
+  {
+    "Year": "2011",
+    "Type_Variable": "TotalCompUse",
+    "Mins_Value": 23.0194
+  },
+  {
+    "Year": "2012",
+    "Type_Variable": "TotalCompUse",
+    "Mins_Value": 22.3573
+  },
+  {
+    "Year": "2013",
+    "Type_Variable": "TotalCompUse",
+    "Mins_Value": 23.3253
+  },
+  {
+    "Year": "2014",
+    "Type_Variable": "TotalCompUse",
+    "Mins_Value": 24.5665
+  },
+  {
+    "Year": "2015",
+    "Type_Variable": "TotalCompUse",
+    "Mins_Value": 22.7339
+  }
+]

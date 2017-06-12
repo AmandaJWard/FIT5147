@@ -1,0 +1,80 @@
+[
+  {
+    "Year": "2003",
+    "LeisureComputerTime": 7.5052,
+    "LeisureGame": 9.1619,
+    "TotalCompUse": 16.6671
+  },
+  {
+    "Year": "2004",
+    "LeisureComputerTime": 9.0068,
+    "LeisureGame": 10.0968,
+    "TotalCompUse": 19.1036
+  },
+  {
+    "Year": "2005",
+    "LeisureComputerTime": 8.5264,
+    "LeisureGame": 9.5854,
+    "TotalCompUse": 18.1118
+  },
+  {
+    "Year": "2006",
+    "LeisureComputerTime": 8.2693,
+    "LeisureGame": 10.2098,
+    "TotalCompUse": 18.4792
+  },
+  {
+    "Year": "2007",
+    "LeisureComputerTime": 7.888,
+    "LeisureGame": 10.5376,
+    "TotalCompUse": 18.4255
+  },
+  {
+    "Year": "2008",
+    "LeisureComputerTime": 7.8184,
+    "LeisureGame": 11.1992,
+    "TotalCompUse": 19.0175
+  },
+  {
+    "Year": "2009",
+    "LeisureComputerTime": 9.1116,
+    "LeisureGame": 11.8658,
+    "TotalCompUse": 20.9773
+  },
+  {
+    "Year": "2010",
+    "LeisureComputerTime": 10.6683,
+    "LeisureGame": 11.025,
+    "TotalCompUse": 21.6932
+  },
+  {
+    "Year": "2011",
+    "LeisureComputerTime": 12.3326,
+    "LeisureGame": 10.6868,
+    "TotalCompUse": 23.0194
+  },
+  {
+    "Year": "2012",
+    "LeisureComputerTime": 11.3777,
+    "LeisureGame": 10.9796,
+    "TotalCompUse": 22.3573
+  },
+  {
+    "Year": "2013",
+    "LeisureComputerTime": 11.5977,
+    "LeisureGame": 11.7275,
+    "TotalCompUse": 23.3253
+  },
+  {
+    "Year": "2014",
+    "LeisureComputerTime": 12.4031,
+    "LeisureGame": 12.1634,
+    "TotalCompUse": 24.5665
+  },
+  {
+    "Year": "2015",
+    "LeisureComputerTime": 10.5445,
+    "LeisureGame": 12.1894,
+    "TotalCompUse": 22.7339
+  }
+]

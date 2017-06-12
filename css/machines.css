@@ -1,37 +1,71 @@
-.d3-tip {
-	line-height: 1;
-	font-weight: bold;
-	padding: 12px;
-	background: rgba(0, 0, 0, 0.8);
-	color: #fff;
-	border-radius: 2px;
+/*This is the CSS file for custom d3 elements*/
+
+#clock, #employment, #average, #when {
+  position: relative;
 }
 
-/* Creates a small triangle extender for the tooltip */
-.d3-tip:after {
-	box-sizing: border-box;
-	display: inline;
-	font-size: 10px;
-	width: 100%;
-	line-height: 1;
-	color: rgba(0, 0, 0, 0.8);
-	content: "\25BC";
-	position: absolute;
-	text-align: center;
+#clock {
+  background-image: url(../svg/alarmclock.svg);
+  background-repeat: no-repeat;
+  background-position: bottom left;
 }
 
-/* Style northward tooltips differently */
-.d3-tip.n:after {
-	margin: -1px 0 0 0;
-	top: 100%;
-	left: 0;
+h1, h3 {
+  background-color: black;
+  color: white;
+  padding: 15px 10px;
 }
 
-/*Style for the circle*/
-circle {
-	fill: #1A5276;
+#clockHands {
+  position: absolute;
+  background-image: url(../svg/hands.svg);
+  background-repeat: no-repeat;
+  background-position: bottom left;
+  background-size: 100% 100%;
+  width: 169px;
+  height: 91px;
+  top: 255px;
+  left: 90px;
+  z-index: 10;
 }
 
-#two circle {
-	fill: red;
+.clockTooltip, .employmentTooltip, .averageTooltip, .whenTooltip {
+  background: rgba(200, 200, 200, 0.5);
+  box-shadow: 0 0 5px #999999;
+  color: #333;
+  display: none;
+  font-size: 12px;
+  padding: 10px;
+  position: absolute;
+  text-align: center;
+  width: 180px;
+  z-index: 10;
+}
+
+.employmentTooltip {
+  width: 330px;
+}
+
+.axis path,
+.axis line {
+  fill: none;
+  stroke: none;
+  shape-rendering: crispEdges;
+}
+
+.browser text {
+  text-anchor: end;
+}
+
+#employment text {
+  font-size: 14px;
+}
+
+.line {
+  fill: none;
+  stroke-width: 3;
+}
+
+.references {
+  padding: 15px 10px;
 }
