@@ -114,14 +114,33 @@ d3.json("data/jobsummary.json", function(data) {
         .style('left', (d3.event.layerX + 10) + 'px');
     });
 
+  //add the x axis
   svg.append('g')
       .attr('class', 'x axis')
       .attr('transform', 'translate(0,' + height + ')')
       .call(xAxis);
 
+  //add text label for the x axis
+  svg.append("text")             
+      .attr("transform",
+            "translate(" + (width/2) + " ," + 
+                           (height + margin.top + 20) + ")")
+      .style("text-anchor", "middle")
+      .text("Year");
+
+  //add the y axis
   svg.append('g')
       .attr('class', 'y axis')
       .call(yAxis);
+
+  // text label for the y axis
+  svg.append("text")
+      .attr("transform", "rotate(-90)")
+      .attr("y", 0 - margin.left)
+      .attr("x",0 - (height / 2))
+      .attr("dy", "1em")
+      .style("text-anchor", "middle")
+      .text("% of Respondents");   
 
   //draw a legend container
   var legend = svg.selectAll('.legend')                 
