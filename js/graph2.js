@@ -21,7 +21,7 @@ d3.json("data/jobsummary.json", function(data) {
   // add the SVG element
   var svg = d3.select("#employment").append("svg");
 
-  var margin = {top: 20, right: 60, bottom: 30, left: 30},
+  var margin = {top: 20, right: 60, bottom: 30, left: 60},
       fullWidth = 1000,
       legendWidth = 268,
       width = fullWidth - legendWidth - margin.left - margin.right, 
